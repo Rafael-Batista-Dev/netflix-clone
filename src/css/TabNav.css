@@ -2,7 +2,7 @@
 
 .tab-icon-door {
   width: 2.8125rem;
-  height: 2.8125rem;
+  height: 3.8125rem;
   fill: var(--main-grey);
 }
 
@@ -18,4 +18,45 @@
   width: 4.375rem;
   height: 4.375rem;
   fill: var(--main-grey);
+}
+
+.tabs {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.tab-nav-conteiner {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  color: var(--main-grey);
+  margin: 0 12%;
+  text-decoration: none;
+}
+
+/* Tab Nav Hover effect*/
+ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+ul li:hover svg path {
+  fill: #fff;
+}
+
+/* Active Tab */
+
+.active {
+  border-bottom: 4px solid var(--main-red);
+}
+
+.tab-selected {
+  color: #fff;
+}
+
+.tab-selected svg path {
+  fill: #fff;
 }

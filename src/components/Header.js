@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "../svg/logo.svg";
 import { NavLink, Link } from "react-router-dom";
+import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
 import styled from "styled-components";
@@ -29,10 +30,10 @@ class Header extends Component {
             type="email"
             placeholder="Email"
           />
-          <Link className="offer-btn">
+          <Button className="offer-btn">
             Assine a nexflix
             <Icon className="svg" icon={ic_keyboard_arrow_right} size={30} />
-          </Link>
+          </Button>
           <SubSubTitle>
             Pronto para assistir? Informe seu email para criar ou acessar sua
             conta.
@@ -92,26 +93,6 @@ const HeaderComponent = styled.div`
     text-align: center;
     flex-direction: colum;
     z-index: 1;
-  }
-
-  // Main Offer button
-  .offer-btn {
-    width: 22rem;
-    display: inline-block;
-    background: var(--main-red);
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    padding: 1rem;
-    border-radius: 0.1875rem;
-    font-size: 1.7rem;
-    text-align: center;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-    transsition: background 0.2s ease-in;
-    cursor: pointer;
-    &:hover {
-      background: var(--main-red-hover);
-    }
   }
 
   .svg {
