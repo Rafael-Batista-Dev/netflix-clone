@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import logo from "../svg/logo.svg";
 import { NavLink, Link } from "react-router-dom";
+import { Icon } from "react-icons-kit";
+import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
 import styled from "styled-components";
 
 class Header extends Component {
@@ -21,8 +23,16 @@ class Header extends Component {
           <Title>Filmes, séries e muito mais.</Title>
           <Title>Sem limites.</Title>
           <SubTitle>Assista onde quiser. Cancele quando quiser.</SubTitle>
-          <input className="input-email" placeholder="Email" type="email" />
-          <Link className="offer-btn">Assine a nexflix</Link>
+          <input
+            className="input-email"
+            style={{ color: "#363636" }}
+            type="email"
+            placeholder="Email"
+          />
+          <Link className="offer-btn">
+            Assine a nexflix
+            <Icon className="svg" icon={ic_keyboard_arrow_right} size={30} />
+          </Link>
           <SubSubTitle>
             Pronto para assistir? Informe seu email para criar ou acessar sua
             conta.
@@ -86,7 +96,7 @@ const HeaderComponent = styled.div`
 
   // Main Offer button
   .offer-btn {
-    width: 25rem;
+    width: 22rem;
     display: inline-block;
     background: var(--main-red);
     text-transform: uppercase;
@@ -104,9 +114,14 @@ const HeaderComponent = styled.div`
     }
   }
 
+  .svg {
+    vertical-align: bottom;
+    margin-left: 1rem;
+  }
+
   // Main Input Email
   .input-email {
-    width: 35rem;
+    width: 38rem;
     border: none;
     padding: 1rem;
     font-size: 1.7rem;
