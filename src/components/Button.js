@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   padding: 1rem;
-  font-size: 1.7rem;
+  width: 25rem;
+  font-size: 1.5rem;
   display: inline-block;
   background: var(--main-red);
   text-transform: uppercase;
@@ -15,6 +16,6 @@ export const Button = styled.button`
   transsition: background 0.2s ease-in;
   cursor: pointer;
   &:hover {
-    background: #d30913;
+    background: var(--main-red-hover);
   }
 `;

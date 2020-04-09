@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
-import TabComponent from "../components/Tabcomponent";
+import TabComponent from "../components/TabComponent";
 
 class Main extends Component {
   render() {

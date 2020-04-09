@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../svg/logo.svg";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
@@ -30,7 +30,7 @@ class Header extends Component {
             type="email"
             placeholder="Email"
           />
-          <Button className="offer-btn">
+          <Button>
             Assine a nexflix
             <Icon className="svg" icon={ic_keyboard_arrow_right} size={30} />
           </Button>
@@ -51,7 +51,7 @@ const Logo = styled.img`
   width: 10rem;
   height: 3.5rem;
   position: absolute;
-  top: 8%;
+  top: 7%;
   left: 10%;
   transform: translate(-50%, -50%);
 `;
@@ -62,7 +62,7 @@ const HeaderComponent = styled.div`
   .signIn-btn {
     right: 0;
     margin: 1.88rem 5% 0;
-    padding: 0.4375rem 1.0625rem;
+    padding: 0.5rem 1.02rem;
     font-weight: 400;
     line-height: normal;
     border-radius: 0.1875rem;
@@ -102,7 +102,7 @@ const HeaderComponent = styled.div`
 
   // Main Input Email
   .input-email {
-    width: 38rem;
+    width: 35rem;
     border: none;
     padding: 1rem;
     font-size: 1.7rem;

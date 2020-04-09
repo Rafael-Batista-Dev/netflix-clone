@@ -18,7 +18,9 @@ function TabContentDoor() {
               </p>
             </span>
             <br />
-            <Button style={{ marginTop: "2rem" }}>Cancelar</Button>
+            <Button className="btn-cancel" style={{ marginTop: "2rem" }}>
+              Cancelar
+            </Button>
           </div>
           <img src={Img} />
         </div>
@@ -38,7 +40,7 @@ const TabContentContainer = styled.div`
   }
 
   img {
-    width: 31.875rem;
+    width: 31rem;
   }
 
   .tab-content {
@@ -48,5 +50,12 @@ const TabContentContainer = styled.div`
     align-items: center;
     font-size: 2rem;
     padding: 2.5rem;
+  }
+
+  .btn-cancel {
+    margin: 0 1.25rem 1.25rem;
+    grid-column: 10/12;
+    font-size: 1rem;
+    width: 10rem;
   }
 `;

@@ -4,6 +4,7 @@ import TabDoor from "./tabs_nav/TabDoor";
 import TabDevices from "./tabs_nav/TabDevices";
 import TabPrices from "./tabs_nav/TabPrices";
 import TabContentDoor from "./TabContentDoor";
+import TabContentDevices from "./TabContentDevices";
 import "../css/TabNav.css";
 
 class TabComponent extends Component {
@@ -13,7 +14,7 @@ class TabComponent extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Tabs
           className="tabs"
           selectedIndex={this.state.tabIndex}
@@ -55,8 +56,11 @@ class TabComponent extends Component {
           <TabPanel>
             <TabContentDoor />
           </TabPanel>
+          <TabPanel>
+            <TabContentDevices />
+          </TabPanel>
         </Tabs>
-      </div>
+      </>
     );
   }
 }
