@@ -100,6 +100,8 @@ function TabContentPrices() {
             </tbody>
           </table>
         </div>
+        <br />
+        <br />
       </div>
     </TabContainer>
   );
