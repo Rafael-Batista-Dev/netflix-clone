@@ -5,6 +5,7 @@ import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
 import styled from "styled-components";
+import { generateMedia } from "styled-media-query";
 
 class Header extends Component {
   render() {
@@ -45,6 +46,13 @@ class Header extends Component {
 }
 export default Header;
 
+const customMedia = generateMedia({
+  lgDesktop: "1350px",
+  mdDesktop: "1150px",
+  sm: "960px",
+  smsm: "740px",
+});
+
 // Logo
 
 const Logo = styled.img`
@@ -54,6 +62,10 @@ const Logo = styled.img`
   top: 7%;
   left: 10%;
   transform: translate(-50%, -50%);
+  margin-left: 0;
+  ${customMedia.lessThan("sm")`
+  left: 20%;
+  `}
 `;
 
 // Header Conteiner
@@ -75,6 +87,11 @@ const HeaderComponent = styled.div`
     &:hover {
       background: var(--main-red-hover);
     }
+
+    ${customMedia.lessThan("smTablet")`
+    margin-top: 1.25rem;
+    right: 5%;
+    `}
   }
 
   //Header Top
