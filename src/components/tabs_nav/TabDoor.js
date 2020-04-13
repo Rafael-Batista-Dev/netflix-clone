@@ -4,7 +4,7 @@ export default function TabDoor() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="tab-icon-door"
+      className="tab-icon-door"
       viewBox="0 0 40 48"
       focusable="true"
       version="1.1"

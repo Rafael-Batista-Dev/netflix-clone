@@ -31,7 +31,7 @@ class Header extends Component {
             type="email"
             placeholder="Email"
           />
-          <Button>
+          <Button className="offer-btn">
             Assine a nexflix
             <Icon className="svg" icon={ic_keyboard_arrow_right} size={30} />
           </Button>
@@ -49,8 +49,8 @@ export default Header;
 const customMedia = generateMedia({
   lgDesktop: "1350px",
   mdDesktop: "1150px",
-  sm: "960px",
-  smsm: "740px",
+  tablet: "960px",
+  smTablet: "740px",
 });
 
 // Logo
@@ -63,7 +63,7 @@ const Logo = styled.img`
   left: 10%;
   transform: translate(-50%, -50%);
   margin-left: 0;
-  ${customMedia.lessThan("sm")`
+  ${customMedia.lessThan("tablet")`
   left: 20%;
   `}
 `;
@@ -110,11 +110,18 @@ const HeaderComponent = styled.div`
     text-align: center;
     flex-direction: colum;
     z-index: 1;
+    ${customMedia.lessThan("smTablet")`
+    display: grid;
+    grid-template-rows: repeat(3, 60px);
+    `}
   }
 
   .svg {
     vertical-align: bottom;
     margin-left: 1rem;
+    ${customMedia.lessThan("smTablet")`
+      display: none;
+    `}
   }
 
   // Main Input Email
@@ -125,6 +132,43 @@ const HeaderComponent = styled.div`
     font-size: 1.7rem;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
     transsition: background 0.2s ease-in;
+    ${customMedia.lessThan("lgDesktop")`
+    margin:  0 1rem 1rem 1rem;
+    max-width: 400px;
+      margin-left: 15%;
+    font-size: 1.5rem;
+    `}
+
+    ${customMedia.lessThan("mdDesktop")`
+    margin:  0 1rem 1rem 1rem;
+    max-width: 400px;
+      margin-left: 15%;
+    font-size: 1.5rem;
+    `}
+
+    ${customMedia.lessThan("tablet")`
+    margin:  0 1rem 1rem 1rem;
+    max-width: 400px;
+      margin-left: 15%;
+    font-size: 1.2rem;
+    `}
+  }
+
+  .offer-btn{
+    ${customMedia.lessThan("lgDesktop")`
+          margin-left: 15%;
+    font-size: 1.5rem;
+    `}
+
+    ${customMedia.lessThan("mdDesktop")`
+          margin-left: 15%;
+    font-size: 1.5rem;
+    `}
+
+    ${customMedia.lessThan("tablet")`
+          margin-left: 15%;
+    font-size: 1.2rem;
+    `}
   }
 `;
 
@@ -135,6 +179,9 @@ const Title = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.1em;
+  ${customMedia.lessThan("tablet")`
+    font-size: 2.6rem;
+    `}
 `;
 
 // Main SubTitle
@@ -143,6 +190,10 @@ const SubTitle = styled.h3`
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 1.25em;
+  ${customMedia.lessThan("smTablet")`
+    margin:  0;
+    font-size: 1.4rem;
+    `}
 `;
 
 // Main SubSubTitle
@@ -151,4 +202,9 @@ const SubSubTitle = styled.h3`
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.25em;
+  ${customMedia.lessThan("smTablet")`
+    margin:  0 ;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    `}
 `;

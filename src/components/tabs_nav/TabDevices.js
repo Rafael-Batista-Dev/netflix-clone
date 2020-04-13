@@ -4,7 +4,7 @@ export default function TabDevices() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="tab-icon-devices"
+      className="tab-icon-devices"
       viewBox="0 45 145 48"
       focusable="true"
     >
