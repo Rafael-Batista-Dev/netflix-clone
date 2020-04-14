@@ -85,19 +85,7 @@ ul li:hover svg path {
   fill: #fff;
 }
 
-@media (max-width: 900px) {
-  .mdScreen {
-    display: none;
-  }
-}
-
-@media (max-width: 900px) {
-  .lgScreen {
-    display: none;
-  }
-
-  .mdScreen {
-    display: block;
-    margin-bottom: 0.4rem;
-  }
+.lgScreen {
+  display: block;
+  margin-top: 1rem;
 }

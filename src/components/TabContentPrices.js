@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { cross } from "react-icons-kit/icomoon/cross";
 import { checkmark } from "react-icons-kit/icomoon/checkmark";
+import { generateMedia } from "styled-media-query";
 
 function TabContentPrices() {
   return (
@@ -109,6 +110,12 @@ function TabContentPrices() {
 
 export default TabContentPrices;
 
+// Styled Media Query
+const customMedia = generateMedia({
+  lgDescktop: "1350px",
+  mdDescktop: "1000px",
+});
+
 // Tab Content Container
 
 const TabContainer = styled.div`
@@ -125,16 +132,30 @@ const TabContainer = styled.div`
     align-items: center;
     font-size: 2rem;
     padding: 2.5rem 0;
+    ${customMedia.lessThan("lgDescktop")`
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+    text-align: center;
+  `}
   }
 
   span {
     grid-column: 1/8;
+    ${customMedia.lessThan("lgDescktop")`
+    grid-column: 1/-1;
+    font-size: 1.5rem
+  `}
   }
 
   .btn-to {
+    margin: 0 1.25rem 1.25rem;
     grid-column: 10/12;
     font-size: 1rem;
-    width: 15rem;
+    ${customMedia.lessThan("mdDescktop")`
+    grid-column: 1/-1;
+    margin-left: 30%
+    margin-right: 30%
+  `}
   }
 
   // Tab Bottom Content

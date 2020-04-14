@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ImgTv from "../images/tv.png";
 import ImgTablet from "../images/tablet.png";
 import ImgMacbook from "../images/macbook.png";
+import { generateMedia } from "styled-media-query";
 
 // import { Container } from './styles';
 
@@ -58,6 +59,12 @@ function TabContentDevices() {
 
 export default TabContentDevices;
 
+// Styled Media Query
+const customMedia = generateMedia({
+  smDescktop: "1440px",
+  tablet: "900px",
+});
+
 // Tab Content Container
 
 const TabContainer = styled.div`
@@ -74,27 +81,60 @@ const TabContainer = styled.div`
     align-items: center;
     font-size: 2rem;
     padding: 2.5rem 0;
+    ${customMedia.lessThan("smDesktop")`
+    grid-template-columns: repeat(2, 1fr);
+    line-height: 1;
+  `}
+
+    ${customMedia.lessThan("tablet")`
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 1.5rem;
+  `}
   }
 
   span {
     grid-column: 1/8;
+    ${customMedia.lessThan("tablet")`
+    grid-column: 1/-1;
+    font-size: 1.5rem
+  `}
   }
 
   .btn-to {
+    margin: 0 1.25rem 1.25rem;
     grid-column: 10/12;
     font-size: 1rem;
-    width: 15rem;
+    ${customMedia.lessThan("tablet")`
+    grid-column: 1/-1;
+    margin-left: 30%
+    margin-right: 30%
+  `}
   }
 
   // Tab Bottom Content
   .tab-bottom-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
     text-align: center;
+    ${customMedia.lessThan("tablet")`
+    grid-template-columns: 1fr;
+
+  `}
   }
 
   .devices {
     margin-bottom: 2rem;
+  }
+
+  .title {
+    margin-top: 2rem;
+    ${customMedia.lessThan("smDesktop")`
+      font-size: 1.5rem;
+      line-height: 1;
+    `}
   }
 
   h3 {
