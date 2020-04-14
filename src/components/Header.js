@@ -16,7 +16,7 @@ class Header extends Component {
           }"
         >
           <Logo src={logo} alt="logo" />
-          <NavLink to="/" className="signIn-btn">
+          <NavLink to="/login" className="signIn-btn">
             Entrar
           </NavLink>
         </div>
