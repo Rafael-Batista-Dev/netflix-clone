@@ -3,7 +3,74 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { generateMedia } from "styled-media-query";
 
+const regexp = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+
+const initState = {
+  checked: false,
+  email: "",
+  password: "",
+  emailError: "",
+  passwordError: "",
+};
+
 class LoginForm extends Component {
+  state = initState;
+  handleEmailChange = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  state = initState;
+  handlePasswordChange = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  validate = () => {
+    let inputError = false;
+    const errors = {
+      emailError: "",
+      passwordError: "",
+    };
+
+    if (!this.state.email) {
+      inputError = true;
+      errors.emailError = "Email ou telefone inválido!";
+    } else if (!this.state.email.match(regexp)) {
+      inputError = true;
+      errors.emailError = (
+        <span style={{ color: "red" }}>Email ou telefone errado!</span>
+      );
+    }
+    if (!this.state.password.length < 4) {
+      inputError = true;
+      errors.passwordError = "No mínimo 4 caracteres";
+    }
+
+    this.setState({
+      ...errors,
+    });
+
+    return inputError;
+  };
+
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    const err = this.validate();
+    if (!err) {
+      this.setState(initState);
+    }
+  };
+
+  handlerCheckbox = (e) => {
+    this.setState({
+      checked: e.target.checked,
+    });
+  };
+
   render() {
     return (
       <FormContainer>
@@ -11,18 +78,54 @@ class LoginForm extends Component {
           <form>
             <h1 style={{ marginTop: "50px", textAlign: "center" }}>Entrar</h1>
             <div className="input-container">
-              <input className="input-empty" type="email" required />
+              <input
+                className={
+                  this.state.emailError
+                    ? "input-error input-empty"
+                    : "input-empty"
+                }
+                type="email"
+                required
+                onChange={this.handleEmailChange}
+                value={this.state.email}
+              />
               <label>Email ou telefone</label>
+              <span style={{ color: "#BD7302", marginLeft: "3rem" }}>
+                {this.state.emailError}
+              </span>
             </div>
             <div className="input-container">
-              <input className="input-empty" type="password" required />
+              <input
+                className={
+                  this.state.passwordError
+                    ? "input-error input-empty"
+                    : "input-empty"
+                }
+                type="password"
+                required
+                onChange={this.handlePasswordChange}
+                value={this.state.password}
+              />
               <label>Senha</label>
+              <span style={{ color: "#BD7302", marginLeft: "3rem" }}>
+                {this.state.passwordError}
+              </span>
             </div>
             <div className="button-container">
-              <button className="btn-to">Entar</button>
+              <button
+                type="submit"
+                className="btn-to"
+                onClick={(e) => this.onSubmit(e)}
+              >
+                Entar
+              </button>
             </div>
             <label className="checkbox-container">
-              <input type="checkbox" checked />
+              <input
+                type="checkbox"
+                defaultChecked={this.state.checked}
+                onChange={this.handlerCheckbox}
+              />
               Lembre-se de mim
               <span className="checkmark"></span>
             </label>
@@ -76,6 +179,10 @@ const FormContainer = styled.div`
     border-radius: 0.2rem;
     background: #4f4f4f;
     color: #fff;
+  }
+
+  .input-error{
+    border-bottom: 1px solid #DB7302
   }
 
   form div label {
