@@ -74,7 +74,7 @@ export default Footer;
 
 // Styled Media Query
 const customMedia = generateMedia({
-  tablet: "740px",
+  tablet: "640px",
 });
 
 const FooterContainer = styled.footer`
@@ -82,18 +82,18 @@ const FooterContainer = styled.footer`
   opacity: 0.75;
   -moz-opacity: 0.75;
   filter: alpha(opacity=75);
-  padding-top: 1rem;
+  padding-top: 0.9rem;
   color: #999;
 
   .footer-columns {
     width: 70%;
-    margin: 0.5rem auto 0;
+    margin: auto;
     font-size: 0.9rem;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     ${customMedia.lessThan("tablet")`
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   `}
   }
 

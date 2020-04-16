@@ -76,7 +76,7 @@ class LoginForm extends Component {
       <FormContainer>
         <div className="form-container" style={{ marginBottom: "42px" }}>
           <form>
-            <h1 style={{ marginTop: "50px", textAlign: "center" }}>Entrar</h1>
+            <h1 style={{ marginTop: "30px", textAlign: "center" }}>Entrar</h1>
             <div className="input-container">
               <input
                 className={
@@ -143,10 +143,7 @@ export default LoginForm;
 
 // Styled Media Query
 const customMedia = generateMedia({
-  lgDesktop: "1350px",
-  mdDesktop: "1150px",
-  tablet: "960px",
-  smTablet: "740px",
+  tablet: "640px",
 });
 
 const FormContainer = styled.div`
@@ -156,12 +153,18 @@ const FormContainer = styled.div`
   z-index: 5;
 
   .form-container {
-    width: 30vw;
-    height: 60vh;
+    width: 25rem;
+    height: 28rem;
     position: relative;
     margin-top:-150px;
     border-radius: 0.5rem;
     background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+    ${customMedia.lessThan("tablet")`
+      padding: 0.6rem;
+      height: 35rem;
+      width: 25rem;
+      height: 28rem;
+    `}
   }
 
   .input-container {
@@ -215,6 +218,9 @@ const FormContainer = styled.div`
     color: #999999
     cursor: pointer;
     margin-left: 3rem;
+    ${customMedia.lessThan("tablet")`
+    margin-top: 10rem;
+`}
   }
 
   .checkbox-container input {
@@ -247,14 +253,20 @@ const FormContainer = styled.div`
   .help {
     text-decoration: none;
     color: #828282;
-    margin-left: 10rem;
     font-size: 0.9rem;
+    margin-left: 7rem;
+    &:hover{
+      text-decoration: underline;
+    }
+    ${customMedia.lessThan("tablet")`
+    margin-left: 6rem;
+  `}
   }
 
   .btn-to {
     margin: 2rem;
     margin-left: 3rem;
-    width: 22.5rem;
+    width: 19rem;
     height: 3.4rem;
     font-size: 1.2rem;
     color: #fff;
@@ -267,5 +279,8 @@ const FormContainer = styled.div`
     &:hover {
       background: var(--main-red-hover);
     }
+    ${customMedia.lessThan("tablet")`
+    width: 18rem;
+`}
   }
 `;

@@ -27,10 +27,8 @@ class Login extends Component {
 export default Login;
 
 const customMedia = generateMedia({
-  lgDesktop: "1350px",
-  mdDesktop: "1150px",
-  tablet: "960px",
-  smTablet: "740px",
+  tablet: "640px",
+  lgTablet: "740px",
 });
 
 // Logo
@@ -44,6 +42,7 @@ const Logo = styled.img`
   transform: translate(-50%, -50%);
   margin-left: 0;
   ${customMedia.lessThan("tablet")`
+  top: 5%;
   left: 20%;
   `}
 `;
@@ -67,11 +66,6 @@ const HeaderComponent = styled.div`
     &:hover {
       background: var(--main-red-hover);
     }
-
-    ${customMedia.lessThan("smTablet")`
-    margin-top: 1.25rem;
-    right: 5%;
-    `}
   }
 
   //Header Top
@@ -89,29 +83,10 @@ const HeaderComponent = styled.div`
     justify-content: center;
     flex-direction: colum;
     z-index: 1;
-    ${customMedia.lessThan("smTablet")`
-    display: grid;
-    grid-template-rows: repeat(3, 60px);
-    `}
   }
 
   .svg {
     vertical-align: bottom;
     margin-left: 1rem;
-    ${customMedia.lessThan("smTablet")`
-      display: none;
-    `}
   }
-`;
-
-// Main Title
-const Title = styled.h1`
-  margin: 0;
-  padding: 0;
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.1em;
-  ${customMedia.lessThan("tablet")`
-    font-size: 2.6rem;
-    `}
 `;
