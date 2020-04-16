@@ -156,7 +156,7 @@ const FormContainer = styled.div`
     width: 25rem;
     height: 28rem;
     position: relative;
-    margin-top:-150px;
+    margin-top:-130px;
     border-radius: 0.5rem;
     background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
     ${customMedia.lessThan("tablet")`
