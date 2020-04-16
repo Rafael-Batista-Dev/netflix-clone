@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LoginForm from "../components/loginForm/LoginForm";
-import FooterLogin from "../components/FooterLogin";
+import FooterLogin from "../components/loginForm/FooterLogin";
 import logo from "../svg/logo.svg";
 import styled from "styled-components";
 import { generateMedia } from "styled-media-query";
