@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Icon } from "react-icons-kit";
-import { iosWorld } from "react-icons-kit/ionicons/iosWorld";
-import { arrowSortedDown } from "react-icons-kit/typicons/arrowSortedDown";
 import { generateMedia } from "styled-media-query";
 
-class Footer extends Component {
+class FooterSelectPlan extends Component {
   state = {
     langContent: false,
   };
@@ -31,7 +27,7 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default FooterSelectPlan;
 
 // Styled Media Query
 const customMedia = generateMedia({
@@ -41,13 +37,8 @@ const customMedia = generateMedia({
 const FooterContainer = styled.footer`
   margin-top: 3.5rem;
   background: var(--main-deep-dark);
-  opacity: 0.75;
-  -moz-opacity: 0.75;
-  filter: alpha(opacity=75);
-  padding-top: 0.9rem;
   color: #999;
   ${customMedia.lessThan("tablet")`
-  margin-top: 1.5rem;
 `}
 
   .footer-copy {
