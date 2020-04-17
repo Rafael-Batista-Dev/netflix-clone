@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginForm from "../components/loginForm/LoginForm";
 import FooterLogin from "../components/loginForm/FooterLogin";
+import { Link } from "react-router-dom";
 import logo from "../svg/logo.svg";
 import styled from "styled-components";
 import { generateMedia } from "styled-media-query";
@@ -13,7 +14,9 @@ class Login extends Component {
           className="header-top{position: relative;height: 10rem;     
           }"
         >
-          <Logo src={logo} alt="logo" />
+          <Link to="/">
+            <Logo src={logo} alt="logo" />
+          </Link>
         </div>
         {/* Header Content */}
         <div className="header-content">

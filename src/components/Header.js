@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../svg/logo.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
@@ -15,7 +15,9 @@ class Header extends Component {
           className="header-top{position: relative;height: 10rem;     
           }"
         >
-          <Logo src={logo} alt="logo" />
+          <Link to="/">
+            <Logo src={logo} alt="logo" />
+          </Link>
           <NavLink to="/login" className="signIn-btn">
             Entrar
           </NavLink>

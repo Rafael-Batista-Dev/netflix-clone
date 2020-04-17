@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import { cross } from "react-icons-kit/icomoon/cross";
@@ -12,7 +13,9 @@ function TabContentPrices() {
       <div className="tab-content">
         <div className="tab-top-content">
           <span>Escolha um dos nosso planos.</span>
-          <Button className="btn-to">Experimente agora!</Button>
+          <Link to="/planos">
+            <Button className="btn-to">Experimente agora!</Button>
+          </Link>
         </div>
         {/* Tab content table */}
         <div className="tab-table">
@@ -143,18 +146,19 @@ const TabContainer = styled.div`
     grid-column: 1/8;
     ${customMedia.lessThan("lgDescktop")`
     grid-column: 1/-1;
-    font-size: 1.5rem
+    font-size: 1.4rem;
   `}
   }
 
   .btn-to {
     margin: 0 1.25rem 1.25rem;
+    margin-right: -30rem;
     grid-column: 10/12;
     font-size: 1rem;
     ${customMedia.lessThan("mdDescktop")`
     grid-column: 1/-1;
-    margin-left: 30%
-    margin-right: 30%
+    margin-left: -30rem;
+    width: 15rem;
   `}
   }
 

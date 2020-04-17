@@ -11,7 +11,7 @@ function App() {
     <Switch>
       <Route exact path="/" component={Main} />
       <Route path="/login" component={Login} />
-      <Route path="/plano-selecionado" component={SelectPlan} />
+      <Route path="/planos" component={SelectPlan} />
     </Switch>
   );
 }

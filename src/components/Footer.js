@@ -64,7 +64,7 @@ class Footer extends Component {
 
           <ul>
             <li>
-              <Link>Conta</Link>
+              <Link to="/SelectPlan">Conta</Link>
             </li>
             <li>
               <Link>Resgatar cartão pré-pago</Link>
