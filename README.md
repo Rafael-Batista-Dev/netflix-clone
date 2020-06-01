@@ -23,7 +23,7 @@
 
 ## 💻 Project
 
-Netflix clone é um projeto que teve como objetivo, utilizar os principais componentes do ReactJS e testar suas funcionalidades. Com isso foi desenvolvido a versão mais amigável Front-end desta famosa Streaming.
+Netflix clone é um projeto que teve como objetivo, criar componentes do ReactJS e testar suas funcionalidades. Com isso foi desenvolvido a versão mais amigável Front-end desta famosa Streaming.
 
 ![aplicacao](https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif)
 
