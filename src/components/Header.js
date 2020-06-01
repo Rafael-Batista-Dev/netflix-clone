@@ -56,7 +56,6 @@ const customMedia = generateMedia({
 });
 
 // Logo
-
 const Logo = styled.img`
   width: 10rem;
   height: 3.5rem;
