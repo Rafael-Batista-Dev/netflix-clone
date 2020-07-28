@@ -25,36 +25,70 @@
 
 Netflix clone é um projeto que teve como objetivo, criar componentes do ReactJS e testar suas funcionalidades. Com isso foi desenvolvido a versão mais amigável Front-end desta famosa Streaming.
 
-![aplicacao](https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif)
+<p align="center" width= '90%'>
+<img alt="MarvelQuiz" title="#MarvelQuiz" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif" />
+</p>
 
-## Tecnologias Utilizadas 🔥
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org)
+- [React.js](https://reactjs.org)
 
 _Segue a lista das techs._
 
-- 1
-  - react-dom
-- 2
-  - react-icons-kit
-- 3
-  - react-media
-- 4
-  - react-router-dom
-- 5
-  - react-tabs
-- 6
-  - styled-components
-- 7
-  - styled-media-query
+✔ Reactjs
+✔ React-dom
+✔ React-icons-kit
+✔ React-media
+✔ React-router-dom
+✔ React-tabs
+✔ Styled-components
+✔ Styled-media-query
 
-### Minhas redes sociais 🔗
+### Pré-requisitos
 
-Rafael batista – [@Linkedin](https://www.linkedin.com/in/rafael-batista-dev/)
-E-mail – rafaelbatista.sth@gmail.com
-Github –[https://github.com/](https://github.com/Rafael-Batista-Dev)
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js][nodejs].
+Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-[https://github.com/Rafael-Batista-Dev](https://github.com/Rafael-Batista-Dev/)
+## 🚀 Como rodar este projeto
+
+Este projeto considerar apenas em uma parte:
+
+### 🎲 Rodando o Projeto
+
+```bash
+# Clone este repositório
+$ https://github.com/Rafael-Batista-Dev/devrada
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd netflix-clone
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start OU yarn start
+
+
+## 📝 Licença
+
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA](license) para saber mais.
+
+Feito com ❤️ por Rafael Batista 👋🏽 [Entre em contato!](www.linkedin.com/in/rafa-dev)
+
+:email: dev.rafaelbatista@gmail.com
+:octocat: Github –[https://github.com/](https://github.com/Rafael-Batista-Dev)
+
+[nodejs]: https://nodejs.org/
+[reactjs]: https://reactjs.org
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[license]: https://opensource.org/licenses/MIT
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+```
