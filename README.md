@@ -1,7 +1,7 @@
 <center>
 <div align="center"> 
 <p align="center" width= '30%'>
-<img alt="netflix-clone" title="#netflix-clone" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/logo.png" />
+<img alt="netflix-clone" title="#netflix-clone" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/logo@1.png" />
 </p>
 </div>
 <h4 align="center"> 
