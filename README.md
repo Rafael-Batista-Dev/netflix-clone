@@ -1,7 +1,9 @@
 <center>
-<h2 align="center"> 
-	🎥 Netflix clone
-</h2>
+<div align="center"> 
+<p align="center" width= '30%'>
+<img alt="netflix-clone" title="#netflix-clone" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/logo.png" />
+</p>
+</div>
 <h4 align="center"> 
 	📟 Aplicação desenvolvida utilizando ReactJS e seus principais componentes 📟
 </h4>
@@ -17,16 +19,13 @@
   Tecnologias |
   Licença
 </p>
-<p>&nbsp;&nbsp;</p>
-
-<p>&nbsp;&nbsp;</p>
 
 ## 💻 Project
 
 Netflix clone é um projeto que teve como objetivo, criar componentes do ReactJS e testar suas funcionalidades. Com isso foi desenvolvido a versão mais amigável Front-end desta famosa Streaming.
 
 <p align="center" width= '100%'>
-<img alt="MarvelQuiz" title="#MarvelQuiz" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif" />
+<img alt="netflix-clone" title="#netflix-clone" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif" />
 </p>
 
 ## 🛠 Tecnologias
