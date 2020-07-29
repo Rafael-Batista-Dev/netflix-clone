@@ -25,7 +25,7 @@
 
 Netflix clone é um projeto que teve como objetivo, criar componentes do ReactJS e testar suas funcionalidades. Com isso foi desenvolvido a versão mais amigável Front-end desta famosa Streaming.
 
-<p align="center" width= '90%'>
+<p align="center" width= '100%'>
 <img alt="MarvelQuiz" title="#MarvelQuiz" src="https://github.com/Rafael-Batista-Dev/netflix-clone/blob/master/src/images/netflix-clone.gif" />
 </p>
 
@@ -62,7 +62,7 @@ Este projeto considerar apenas em uma parte:
 
 ```bash
 # Clone este repositório
-$ https://github.com/Rafael-Batista-Dev/devrada
+$ https://github.com/Rafael-Batista-Dev/netflix-clone
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd netflix-clone
