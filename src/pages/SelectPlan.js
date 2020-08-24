@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../svg/logo.svg";
 import { Button } from "../components/Button";
-import checkmarkLogo from "../images/checkmark.png";
+import checkmarkLogo from "../images/Checkmark.png";
 import { Link, NavLink } from "react-router-dom";
 import FooterSelectPlan from "../components/FooterSelectPlan";
 import { generateMedia } from "styled-media-query";
